@@ -71,16 +71,24 @@ add the URL to `sitemap.xml` and the `LOCATIONS` map in `geo.js`.
 
 ## Inquiry form
 
-`inquiry.html` ships with a **placeholder** (`#inquiry-form`, the `.form-embed`
-block). When the real booking form is ready, replace that entire block with the
-form markup or an `<iframe>` embed — the surrounding layout adapts automatically.
+`inquiry.html` embeds OpnForm form 146 ("Roam - Website Inquiry") in
+`#inquiry-form` as an iframe. Its height is driven by OpnForm's own
+iframe-resizer parent script, loaded from the forms host at the bottom of the
+page — so the page scrolls rather than the iframe. To swap the form, change the
+iframe `src` to the new form's public URL; the `.form-embed--live` styling
+adapts automatically.
+
+The form is the **only** contact route on the site — there is deliberately no
+public email address (see below).
 
 ## To customize
 
 - **Domain:** every canonical / OG / schema URL uses `https://roamcontent.co/`.
   Find-and-replace if the domain changes.
-- **Contact:** `hello@roamcontent.co` and Instagram `@roamcontent.co` are
-  placeholders — search and replace with the real handles.
+- **Contact:** the inquiry form is the only contact route. No email address is
+  published anywhere (no `mailto:`, no `email` field in the JSON-LD) because the
+  domain has no mailbox — if one is ever set up, re-add it to the CTA blocks and
+  the schema. Instagram `@roamcontent.co` is still a placeholder handle.
 - **Imagery:** photos in `public/media/` are curated from the TEG `photo-site`
   library as on-brand stand-ins. Swap in genuine Roam media (and add real
   highlight-film links / video embeds) when available.
