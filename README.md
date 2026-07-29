@@ -77,9 +77,9 @@ form markup or an `<iframe>` embed — the surrounding layout adapts automatical
 
 ## To customize
 
-- **Domain:** every canonical / OG / schema URL uses `https://roamcontent.ca/`.
+- **Domain:** every canonical / OG / schema URL uses `https://roamcontent.co/`.
   Find-and-replace if the domain changes.
-- **Contact:** `hello@roamcontent.ca` and Instagram `@roamcontent.co` are
+- **Contact:** `hello@roamcontent.co` and Instagram `@roamcontent.co` are
   placeholders — search and replace with the real handles.
 - **Imagery:** photos in `public/media/` are curated from the TEG `photo-site`
   library as on-brand stand-ins. Swap in genuine Roam media (and add real
