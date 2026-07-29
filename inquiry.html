@@ -154,18 +154,22 @@
       </div>
 
       <!-- ── INQUIRY FORM EMBED ──────────────────────────────
-           Drop the live inquiry form here when it's ready.
-           Replace the entire .form-embed block below with your
-           form markup (or an <iframe> embed). The surrounding
-           layout and styling will adapt automatically.
+           Live OpnForm embed — form 146 "Roam - Website Inquiry".
+           The iframe has no fixed height: OpnForm's own
+           iframe-resizer (loaded at the bottom of this page)
+           grows it to the form's full content height, so the
+           page scrolls instead of the iframe.
       ──────────────────────────────────────────────────────── -->
-      <div class="form-embed" id="inquiry-form">
-        <span class="form-embed__mark" aria-hidden="true">&#9998;</span>
-        <h3>Our inquiry form is on its way.</h3>
-        <p>The full booking form will live right here. In the meantime, send us a note and we&rsquo;ll get the
-          conversation started.</p>
-        <p style="font-size:13px;">Developers: replace the <code>#inquiry-form</code> block with the embed.</p>
-        <a href="mailto:hello@roamcontent.ca?subject=Content%20inquiry" class="btn btn--primary">Email us instead</a>
+      <div class="form-embed form-embed--live" id="inquiry-form">
+        <iframe id="roam-inquiry" title="Roam Content Co. inquiry form"
+          src="https://forms.tridenteventgroup.ca/forms/roam-website-inquiry-tmkkpw" scrolling="no"
+          loading="lazy"></iframe>
+        <noscript>
+          <p class="form-embed__fallback">Our inquiry form needs JavaScript. <a
+              href="https://forms.tridenteventgroup.ca/forms/roam-website-inquiry-tmkkpw" target="_blank"
+              rel="noopener">Open it in a new tab</a> or email <a
+              href="mailto:hello@roamcontent.ca?subject=Content%20inquiry">hello@roamcontent.ca</a>.</p>
+        </noscript>
       </div>
     </div>
   </section>
@@ -213,6 +217,23 @@
 
   <script src="script.js"></script>
   <script src="geo.js"></script>
+
+  <!-- OpnForm's own iframe-resizer parent script: keeps #roam-inquiry at full content height -->
+  <script src="https://forms.tridenteventgroup.ca/widgets/iframe.min.js"></script>
+  <script>
+    (function () {
+      var frame = document.getElementById('roam-inquiry');
+      if (!frame) return;
+      var tries = 0;
+      (function init() {
+        if (window.iFrameResize) {
+          window.iFrameResize({ log: false, checkOrigin: false }, frame);
+        } else if (tries++ < 60) {
+          setTimeout(init, 100);
+        }
+      })();
+    })();
+  </script>
 </body>
 
 </html>

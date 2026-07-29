@@ -750,6 +750,24 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 .form-embed code { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 13px; background: var(--bone); padding: 2px 7px; border-radius: 3px; color: var(--ember-deep); }
 .form-embed .btn { margin-top: 6px; }
 
+/* Live embed — iframe fills the card, placeholder chrome removed */
+.form-embed--live {
+  display: block;
+  padding: 0;
+  min-height: 0;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  overflow: hidden;
+}
+.form-embed--live iframe {
+  display: block;
+  border: 0;
+  width: 1px;
+  min-width: 100%;
+  min-height: 620px;
+}
+.form-embed__fallback { padding: clamp(28px, 4vw, 48px); text-align: center; }
+
 /* ── FOOTER ──────────────────────────────────────────── */
 .footer {
   background: var(--always-dark-deep);
