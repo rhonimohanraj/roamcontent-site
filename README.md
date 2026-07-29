@@ -83,7 +83,7 @@ public email address (see below).
 
 ## To customize
 
-- **Domain:** every canonical / OG / schema URL uses `https://roamcontent.co/`.
+- **Domain:** every canonical / OG / schema URL uses `https://www.roamcontent.co/`.
   Find-and-replace if the domain changes.
 - **Contact:** the inquiry form is the only contact route. No email address is
   published anywhere (no `mailto:`, no `email` field in the JSON-LD) because the
