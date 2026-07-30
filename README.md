@@ -35,9 +35,10 @@ Cupid Content Co., Happily Ever Socials):
   TikTok · Stories · 9:16 · Shot on iPhone Pro · Trending Audio."
 - **Film grain** (`.grain`) — subtle SVG-noise overlay on hero/about media for a
   shot-not-staged feel.
-- **Same-day delivery timeline** (`.timeline`) — "same day raw → same night
-  teaser → next day reels," the differentiator vs. traditional film. No
-  long-lead recap/highlight edit is promised.
+- **Same-day delivery timeline** (`.timeline`) — two steps, "same day raw
+  footage → next day reels," the differentiator vs. traditional film. No
+  same-night teaser and no long-lead recap/highlight edit are promised; the
+  grid is `repeat(2, 1fr)`, so adding a third step needs a CSS change.
 - **Voice** — "invisible guest with a camera," "caught not posed," "shot on
   iPhone Pro," social-first; the word *videographer* is deliberately avoided.
 
